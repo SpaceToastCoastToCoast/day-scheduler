@@ -3,6 +3,88 @@ body {
   background-color: gray;
 }
 
+#main {
+  width: 90%;
+  margin: auto;
+}
+
+ul {
+  display: flex;
+  flex-flow: row nowrap;
+  list-style-type: none;
+  padding-left: 2px;
+  margin-top: 0px;
+}
+
 #timeline {
   background-color: silver;
+  width: 90%;
+  position: absolute;
+  top: 90px;
+  height: 600px;
+}
+
+#hours {
+  position: absolute;
+  top: 90px;
+  height: 600px;
+  width: 90%;
+  margin: 0;
+}
+
+.hour {
+  position: relative;
+  width: 10%;
+  box-sizing: border-box;
+  padding-top: 300px;
+  padding-left: 8px;
+  display: inline-block;
+  border-left: 1px dotted black;
+}
+
+.row:nth-child(even) {
+  margin-top: 330px;
+}
+
+.row {
+  width: 100%;
+  height: 150px;
+  position: absolute;
+  top: 0;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  display: inline-block;
+}
+
+.row:before {
+  position: absolute;
+  left: 0;
+  height: 265px;
+}
+
+.event {
+  background-color: white;
+  box-sizing: border-box;
+  height: 240px;
+  padding: 8px;
+  border: 1px solid black;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  margin-right: 2px;
+}
+
+.length15 {
+  width: 2.5%;
+}
+.length30 {
+  width: 5%;
+}
+.length60 {
+  width: 10%;
+}
+.length90 {
+  width: 15%;
+}
+.length120 {
+  width: 20%;
 }
