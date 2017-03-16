@@ -1,0 +1,113 @@
+$timeline-total-height: 500px;
+$delineator-height: $timeline-total-height - 20px;
+$event-color: #4d7ccc;
+$event-color-alt: #41afc4;
+$event-border-color: #0a3658;
+
+h1 {
+  padding-bottom: 16px;
+  border-bottom: 1px solid $event-color;
+}
+
+#main {
+  width: 90%;
+  margin: auto;
+}
+
+ul {
+  display: flex;
+  flex-flow: row nowrap;
+  list-style-type: none;
+  margin-top: 0px;
+  padding-left: 2px;
+}
+
+#timeline {
+  width: 90%;
+  position: absolute;
+  top: 90px;
+  height: $timeline-total-height;
+}
+
+#hours {
+  position: absolute;
+  top: 100px;
+  width: 90%;
+  margin: 0;
+  animation: change-height 1s ease-in-out 0.5s 1 normal forwards;
+}
+
+.hour {
+  position: relative;
+  width: 10%;
+  box-sizing: border-box;
+  padding-top: ($delineator-height * 0.5);
+  padding-left: 8px;
+  display: inline-block;
+  border-left: 1px dotted black;
+}
+
+.hour:nth-child(1) {
+  border-left: none;
+}
+
+.row:nth-child(even) {
+  animation: split 1s ease-in-out 0.5s 1 normal forwards;
+}
+
+.row:nth-child(even) .event {
+  background-color: $event-color-alt;
+}
+
+@keyframes split {
+  0% {
+    margin-top: 0px;
+  }
+  100% {
+    margin-top: ($timeline-total-height * 0.5) + 30px;
+  }
+}
+
+@keyframes change-height {
+  0% {
+    height: $delineator-height * 0.5;
+  }
+  100% {
+    height: $delineator-height;
+  }
+}
+
+.row {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  display: inline-block;
+}
+
+.row:before {
+  position: absolute;
+  left: 0;
+  height: ($timeline-total-height * 0.5) - 30px;
+}
+
+.event {
+  background-color: $event-color;
+  box-sizing: border-box;
+  height: ($timeline-total-height * 0.5) - 60px;
+  padding: 8px;
+  border: 2px solid $event-border-color;
+  border-radius: 8px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  margin-right: 2px;
+}
+
+.event span {
+  font-style: italic;
+  color: $event-border-color;
+}
+.event h3 {
+  margin-bottom: 8px;
+}

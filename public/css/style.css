@@ -1,90 +1,102 @@
-/*For testing only - will make colors more appealing*/
-body {
-  background-color: gray;
-}
+/* line 7, sass/style.scss */
+h1 {
+  padding-bottom: 16px;
+  border-bottom: 1px solid #4d7ccc; }
 
+/* line 12, sass/style.scss */
 #main {
   width: 90%;
-  margin: auto;
-}
+  margin: auto; }
 
+/* line 17, sass/style.scss */
 ul {
   display: flex;
   flex-flow: row nowrap;
   list-style-type: none;
-  padding-left: 2px;
   margin-top: 0px;
-}
+  padding-left: 2px; }
 
+/* line 25, sass/style.scss */
 #timeline {
-  background-color: silver;
   width: 90%;
   position: absolute;
   top: 90px;
-  height: 600px;
-}
+  height: 500px; }
 
+/* line 32, sass/style.scss */
 #hours {
   position: absolute;
-  top: 90px;
-  height: 600px;
+  top: 100px;
   width: 90%;
   margin: 0;
-}
+  animation: change-height 1s ease-in-out 0.5s 1 normal forwards; }
 
+/* line 40, sass/style.scss */
 .hour {
   position: relative;
   width: 10%;
   box-sizing: border-box;
-  padding-top: 300px;
+  padding-top: 240px;
   padding-left: 8px;
   display: inline-block;
-  border-left: 1px dotted black;
-}
+  border-left: 1px dotted black; }
 
+/* line 50, sass/style.scss */
+.hour:nth-child(1) {
+  border-left: none; }
+
+/* line 54, sass/style.scss */
 .row:nth-child(even) {
-  margin-top: 330px;
-}
+  animation: split 1s ease-in-out 0.5s 1 normal forwards; }
 
+/* line 58, sass/style.scss */
+.row:nth-child(even) .event {
+  background-color: #41afc4; }
+
+@keyframes split {
+  0% {
+    margin-top: 0px; }
+  100% {
+    margin-top: 280px; } }
+
+@keyframes change-height {
+  0% {
+    height: 240px; }
+  100% {
+    height: 480px; } }
+
+/* line 80, sass/style.scss */
 .row {
   width: 100%;
-  height: 150px;
   position: absolute;
   top: 0;
   padding-top: 15px;
   padding-bottom: 15px;
-  display: inline-block;
-}
+  display: inline-block; }
 
+/* line 89, sass/style.scss */
 .row:before {
   position: absolute;
   left: 0;
-  height: 265px;
-}
+  height: 220px; }
 
+/* line 95, sass/style.scss */
 .event {
-  background-color: white;
+  background-color: #4d7ccc;
   box-sizing: border-box;
-  height: 240px;
+  height: 190px;
   padding: 8px;
-  border: 1px solid black;
+  border: 2px solid #0a3658;
+  border-radius: 8px;
   margin-top: 2px;
   margin-bottom: 2px;
-  margin-right: 2px;
-}
+  margin-right: 2px; }
 
-.length15 {
-  width: 2.5%;
-}
-.length30 {
-  width: 5%;
-}
-.length60 {
-  width: 10%;
-}
-.length90 {
-  width: 15%;
-}
-.length120 {
-  width: 20%;
-}
+/* line 107, sass/style.scss */
+.event span {
+  font-style: italic;
+  color: #0a3658; }
+
+/* line 111, sass/style.scss */
+.event h3 {
+  margin-bottom: 8px; }

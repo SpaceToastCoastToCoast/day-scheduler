@@ -57,13 +57,19 @@ createTimeline = function(data) {
     var startOffset = startTime.replace(":", "");
     var width = (length / totalDayLength) * 100;
     var margin = (getEventLength(data.events[0].start, startTime) / totalDayLength) * 100;
-    title.innerHTML = data.events[i].title + ": ";
+
+    title.innerHTML = data.events[i].title;
     times.innerHTML = startTime + " - " + endTime;
     event.appendChild(title);
     event.appendChild(times);
+
     event.className = "event length" + length + " start" + startOffset;
+
+    stylesheet.insertRule(".length" + length +
+                          "{ width: " + width + "%; }", 0);
     stylesheet.insertRule(".start" + startOffset +
                           "{ margin-left: " + margin + "%; }", 0);
+
     row.className = "row";
     row.appendChild(event);
     timeline.appendChild(row);
