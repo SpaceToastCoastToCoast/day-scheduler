@@ -66,9 +66,9 @@ createTimeline = function(data) {
     event.className = "event length" + length + " start" + startOffset;
 
     stylesheet.insertRule(".length" + length +
-                          "{ width: " + width + "%; }", 0);
+                          "{ width: " + width + "%; }", 1);
     stylesheet.insertRule(".start" + startOffset +
-                          "{ margin-left: " + margin + "%; }", 0);
+                          "{ margin-left: " + margin + "%; }", 1);
 
     row.className = "row";
     row.appendChild(event);

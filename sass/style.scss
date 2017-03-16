@@ -4,6 +4,12 @@ $event-color: #4d7ccc;
 $event-color-alt: #41afc4;
 $event-border-color: #0a3658;
 
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+
+html {
+  font-family: 'Roboto Condensed';
+}
+
 h1 {
   padding-bottom: 16px;
   border-bottom: 1px solid $event-color;
