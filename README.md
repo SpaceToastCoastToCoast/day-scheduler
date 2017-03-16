@@ -1,9 +1,14 @@
 # day-scheduler
 Plots a day's schedule given in JSON format onto a visual 24-hr timeline.
 
-The page makes an XHR request to the server to obtain the data it displays; for this reason, a compatible server is included.
+The page makes an XHR request to the server to obtain the data it displays; for this reason, a compatible server is included. The server is written in Node.js.
+
+###Requirements
+
+Node.js and the npm package manager.
 
 ###Screenshot
+
 ![](https://github.com/SpaceToastCoastToCoast/day-scheduler/blob/master/screenshot.png)
 
 ###To use
